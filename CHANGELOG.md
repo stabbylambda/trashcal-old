@@ -1,3 +1,15 @@
+# v0.1.3 (Wed May 11 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Create dependency-review.yml ([@stabbylambda](https://github.com/stabbylambda))
+
+#### Authors: 1
+
+- David Stone ([@stabbylambda](https://github.com/stabbylambda))
+
+---
+
 # v0.1.1 (Tue May 10 2022)
 
 #### 🐛 Bug Fix
