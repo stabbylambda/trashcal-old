@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/jest": "^27.5.0",
     "@types/node-fetch": "^2.5.12",
+    "auto": "^10.36.5",
     "jest": "^28.1.0",
     "msw": "^0.39.2",
     "prettier": "^2.6.2",
@@ -35,5 +36,10 @@
     "ical-generator": "^3.4.2",
     "node-fetch": "^2.6.1",
     "node-html-parser": "^5.3.3"
+  },
+  "auto": {
+    "plugins": [
+      "npm"
+    ]
   }
 }
