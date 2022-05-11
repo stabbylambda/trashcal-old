@@ -1,0 +1,32 @@
+{
+  "name": "trashcal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "format": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stabbylambda/trashcal.git"
+  },
+  "author": "David Stone <david@stabbylambda.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stabbylambda/trashcal/issues"
+  },
+  "homepage": "https://github.com/stabbylambda/trashcal#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4",
+    "xo": "^0.48.0"
+  },
+  "dependencies": {
+    "ical-generator": "^3.4.2",
+    "node-html-parser": "^5.3.3"
+  }
+}
