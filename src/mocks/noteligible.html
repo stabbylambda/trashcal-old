@@ -1,0 +1,1795 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script
+      src="/static/111213/js/perf/stub.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="/faces/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript?rel=1651897041000"
+      type="text/javascript"
+    ></script>
+    <script
+      src="/jslibrary/1637251310236/sfdc/VFRemote.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="/jslibrary/1633356814236/ui-sfdc-javascript-impl/SfdcCore.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="/static/111213/js/picklist4.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="/jslibrary/1635874030236/sfdc/VFState.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="/resource/1630407834000/CosdAccessibility"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://www.google.com/recaptcha/enterprise.js"
+      type="text/javascript"
+    ></script>
+    <link
+      class="user"
+      href="/resource/1641456002000/TSW_Web/css/main.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      class="user"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800,700|Merriweather:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="/jslibrary/1635874030236/sfdc/NetworkTracking.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      try {
+        NetworkTracking.init(
+          "/_ui/networks/tracking/NetworkTrackingServlet",
+          "network",
+          "066t0000000sYPT"
+        );
+      } catch (x) {}
+      try {
+        NetworkTracking.logPageView();
+      } catch (x) {}
+    </script>
+    <script>
+      (function (UITheme) {
+        UITheme.getUITheme = function () {
+          return UserContext.uiTheme;
+        };
+      })((window.UITheme = window.UITheme || {}));
+    </script>
+    <script type="text/javascript">
+      Visualforce.remoting.Manager.add(
+        new $VFRM.RemotingProviderImpl({
+          vf: {
+            vid: "066t0000000sYPT",
+            xhr: false,
+            dev: false,
+            tst: false,
+            dbg: false,
+            tm: 1652137163609,
+            ovrprm: false,
+          },
+          actions: {
+            CollectionMapLookupController: {
+              ms: [
+                {
+                  name: "getNearbySites",
+                  len: 4,
+                  ns: "",
+                  ver: 51.0,
+                  csrf: "VmpFPSxNakF5TWkwd05TMHhNbFF5TWpvMU9Ub3lNeTQyTVRCYSxfU2IyQ0lRZ3dEemlsVHpsUmtpTTFfLE1UQTFZbU0w",
+                },
+                {
+                  name: "getSitesByAddress",
+                  len: 2,
+                  ns: "",
+                  ver: 51.0,
+                  csrf: "VmpFPSxNakF5TWkwd05TMHhNbFF5TWpvMU9Ub3lNeTQyTVRCYSxkQU5aOWpaSDZWWDBkWUkxejIyMjVZLFlURmxOVFpo",
+                },
+              ],
+              prm: 0,
+            },
+            TSWGenericController: {
+              ms: [
+                {
+                  name: "checkFlaggedEmails",
+                  len: 1,
+                  ns: "",
+                  ver: 36.0,
+                  csrf: "VmpFPSxNakF5TWkwd05TMHhNbFF5TWpvMU9Ub3lNeTQyTVRGYSxWNFR2TndVUWtWS3FGWTJyWUF1SDZtLFpqSm1PVEF4",
+                },
+                {
+                  name: "getLocationDetail",
+                  len: 2,
+                  ns: "",
+                  ver: 36.0,
+                  csrf: "VmpFPSxNakF5TWkwd05TMHhNbFF5TWpvMU9Ub3lNeTQyTVRGYSxLLWRHbnJhUG0wVS1IX0F0TFRpSUQzLE1XWTJZekps",
+                },
+              ],
+              prm: 0,
+            },
+            TSWLoginRegisterCtrl: {
+              ms: [
+                {
+                  name: "CheckIfUserExist",
+                  len: 1,
+                  ns: "",
+                  ver: 36.0,
+                  csrf: "VmpFPSxNakF5TWkwd05TMHhNbFF5TWpvMU9Ub3lNeTQyTVRGYSx1dHl6NEdmeGtkdHVaNnZJeWpyQ25jLFlUUmpOams0",
+                },
+              ],
+              prm: 0,
+            },
+          },
+          service: "apexremote",
+        })
+      );
+    </script>
+  </head>
+  <body>
+    <script>
+      document.getElementsByTagName("body")[0].classList.add("portal");
+    </script>
+    <title>Trash Collection Schedule</title>
+    <meta name="description" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <link
+      href="/resource/1641456002000/TSW_Web/img/favicon.png"
+      rel="icon"
+      type="image/png"
+    />
+
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+    <style>
+      .row.schedule {
+        border-bottom: 1px solid #1b242a;
+      }
+      .schedule h3 {
+        background: #e4e9eb;
+        padding: 2px 8px;
+      }
+      .schedule p {
+        padding: 0px 8px;
+      }
+    </style>
+    <div id="outer-wrap">
+      <div id="inner-wrap">
+        <span id="j_id0:showmsg"></span>
+        <form
+          id="j_id0:j_id29"
+          name="j_id0:j_id29"
+          method="post"
+          action="/CollectionDetail?id=a4Ot0000001Dln6EAC"
+          enctype="application/x-www-form-urlencoded"
+        >
+          <input type="hidden" name="j_id0:j_id29" value="j_id0:j_id29" />
+          <span id="j_id0:j_id29:HeadComId">
+            <style type="text/CSS">
+              .loadingImage {
+                vertical-align: bottom;
+              }
+              .loadingDescription {
+                padding: 0 1.5em 0 0.5em;
+              }
+              .loadingHolder {
+                position: relative;
+                top: 45%;
+                white-space: nowrap;
+              }
+              .loadingDiv {
+                background-color: white;
+                opacity: 0.75;
+                filter: alpha(opacity=75);
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                z-index: 9999;
+                left: 0;
+                top: 0;
+              }
+              .hideButton {
+                display: none !important;
+              }
+              .create-account-btn.disabled {
+                background-color: #dde2e5;
+                pointer-events: none;
+                cursor: not-allowed;
+              }
+              .g-recaptcha iframe {
+                padding: 0;
+              }
+              @media screen and (max-width: 768px) {
+                .captcha-field label {
+                  display: none;
+                }
+              }
+              .accessibility-tool {
+                padding: 5px 0 0.5em;
+                margin-right: 30px;
+              }
+              div#__ba_panel {
+                display: none;
+              }
+            </style>
+            <header>
+              <script>
+                var highContrastCssLinkTag;
+                function addContrastCss() {
+                  highContrastCssLinkTag = document.createElement("link");
+                  highContrastCssLinkTag.setAttribute("rel", "stylesheet");
+                  highContrastCssLinkTag.setAttribute("type", "text/css");
+                  highContrastCssLinkTag.setAttribute(
+                    "href",
+                    "https://www.sandiego.gov/sites/default/files/high_contrast_current.css"
+                  );
+                  document
+                    .getElementsByTagName("head")[0]
+                    .appendChild(highContrastCssLinkTag);
+                }
+
+                function defaultContrast() {
+                  if (highContrastCssLinkTag) {
+                    highContrastCssLinkTag.remove();
+                    highContrastCssLinkTag = null;
+                  }
+                }
+
+                function addHighContrast() {
+                  if (!highContrastCssLinkTag) {
+                    addContrastCss();
+                  }
+                }
+              </script>
+              <script type="text/javascript">
+                var actualResponse;
+
+                function recaptchaCallback() {
+                  actualResponse = grecaptcha.enterprise.getResponse();
+
+                  document.getElementById("").value = actualResponse;
+                  document
+                    .querySelector(".create-account-btn")
+                    .classList.remove("disabled");
+                  document.getElementById("g-recaptcha-error").innerHTML = "";
+                }
+                function expiredCallback() {
+                  document
+                    .querySelector(".create-account-btn")
+                    .classList.add("disabled");
+                }
+              </script>
+              <div class="top-nav-strip">
+                <div class="l-constrained">
+                  <div class="row">
+                    <div class="sm-six six columns no-gutters">
+                      <p>
+                        Visit <a href="http://www.sandiego.gov">sandiego.gov</a>
+                      </p>
+                    </div>
+                    <div class="sm-six six columns no-gutters">
+                      <a class="search-icon translate-icon--open l-margin-rs"
+                        ><i class="icon-translate"></i>
+                      </a>
+                      <div
+                        class="quicklinks l-padding-desktop-bs l-margin-mobile-rm l-padding-mobile-ts text-right"
+                      >
+                        <a
+                          class="popup-modal accessibility-tool"
+                          href="#accessibility_popup"
+                          id="accessibility"
+                          >Accessibility Tools</a
+                        >
+
+                        <div class="google-translate">
+                          <div id="google_translate_element"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="l-constrained row l-padding-td l-padding-bd">
+                <div class="three columns no-gutters">
+                  <a class="logo" href="/">
+                    <img
+                      alt="The City of San Diego"
+                      height="64"
+                      src="/resource/1641456002000/TSW_Web/img/logo-portal.png"
+                      width="245"
+                    />
+                  </a>
+                </div>
+                <div class="nine columns">
+                  <div class="menu-btn menu-btn--open">
+                    <a
+                      class="menu-toggle js-menu-toggle"
+                      href="#nav"
+                      id="nav-open-btn"
+                      ><span>Menu</span><span class="menu-toggle__line"></span
+                    ></a>
+                  </div>
+                  <nav
+                    class="main__navigation--portal nav-primary"
+                    id="nav"
+                    role="navigation"
+                  >
+                    <ul>
+                      <li>
+                        <a href="https://www.sandiego.gov/getitdone"
+                          >New Report</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://getitdone.force.com/TSWViewReportByList"
+                          >View Reports</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="https://getitdone.force.com/SiteArticlesList"
+                          >FAQ</a
+                        >
+                      </li>
+
+                      <li>
+                        <span id="j_id0:j_id29:HeadComId:HeaderCompId:j_id39">
+                          <div id="login">
+                            <a class="popup-modal" href="#login-modal">
+                              LOGIN/REGISTER
+                            </a>
+                          </div></span
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </header>
+
+            <div class="hero__wrap">
+              <div
+                class="hero__bg hero__bg--secondary"
+                style="
+                  background-image: url('/resource/1641456002000/TSW_Web/img/home-hero-1.jpg');
+                "
+              ></div>
+              <div class="hero--credit">
+                <p>
+                  <span class="hero-caption">Torrey Pines State Beach</span
+                  ><br />
+                  <span class="hero-image-by-prefix">Photo by</span>
+                  <span class="hero-image-by">Luis Peraza</span>
+                </p>
+              </div>
+              <div class="l-constrained--site row">
+                <div class="twelve columns no-gutters">
+                  <div class="main__message main__message--transparent">
+                    <h1
+                      align="right"
+                      style="color: #b3d9ff; height: 100px"
+                    ></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="white-popup mfp-hide" id="login-modal">
+              <h1>Log In</h1>
+
+              <div class="form-item form-type-textfield form-item-fname">
+                <div id="usernameId-error" style="display: none">
+                  <font color="red"> Please enter your Email Address. </font>
+                </div>
+                <div id="usernameId-error1" style="display: none">
+                  <font color="red"> Please enter valid email address </font>
+                </div>
+                <label
+                  ><span class="form-required" title="This field is required."
+                    >*</span
+                  ></label
+                >
+                <input
+                  class="form-text required"
+                  id="usernameId"
+                  name="username"
+                  placeholder="E-mail"
+                  type="text"
+                />
+              </div>
+
+              <div class="form-item form-type-textfield form-item-fname">
+                <div id="passwordId-error" style="display: none">
+                  <font color="red"> Please enter your password. </font>
+                </div>
+                <label
+                  ><span class="form-required" title="This field is required."
+                    >*</span
+                  ></label
+                >
+                <input
+                  class="form-text required"
+                  id="passwordId"
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                />
+              </div>
+
+              <p>
+                <a
+                  class="popup-modal"
+                  href="#password-modal"
+                  onclick="FillUserName();"
+                  >Forgot your password?</a
+                >
+              </p>
+              <input
+                class="btn--wide btn--xl btn"
+                id="j_id0:j_id29:HeadComId:HeaderCompId:loginButton"
+                name="j_id0:j_id29:HeadComId:HeaderCompId:loginButton"
+                onclick="ValidateLogin();;A4J.AJAX.Submit('j_id0:j_id29',event,{'similarityGroupingId':'j_id0:j_id29:HeadComId:HeaderCompId:loginButton','oncomplete':function(request,event,data){},'parameters':{'j_id0:j_id29:HeadComId:HeaderCompId:loginButton':'j_id0:j_id29:HeadComId:HeaderCompId:loginButton'} } );return false;"
+                value="Login"
+                style="margin-bottom: 5px"
+                type="button"
+              />
+
+              <p>Login to your account to continue.</p>
+              <div class="accordions js-toggle-accordion">
+                <span id="j_id0:j_id29:HeadComId:HeaderCompId:status"
+                  ><span
+                    id="j_id0:j_id29:HeadComId:HeaderCompId:status.start"
+                    style="display: none"
+                  >
+                    <div class="loadingDiv" id="loadingDiv">
+                      <span class="loadingHolder" id="loadingHolder">
+                        <img
+                          alt="Loading..."
+                          class="loadingImage"
+                          src="/apexpages/slds/latest/assets/images/spinners/slds_spinner_brand.gif"
+                          style="width: 60px"
+                          title="Loading..."
+                        />
+                      </span></div></span
+                  ><span
+                    id="j_id0:j_id29:HeadComId:HeaderCompId:status.stop"
+                  ></span
+                ></span>
+                <div class="accordion">
+                  <p class="accordion__heading">
+                    <a class="accordion__link" href="#"
+                      >Not registered? Create an account now to track all of
+                      your logged issues<span class="toggle-icon"></span
+                    ></a>
+                  </p>
+                  <div class="accordion__drawer" style="display: none">
+                    <div>
+                      <p>
+                        To create an account that will allow you to receive
+                        follow ups and track your reports, provide your contact
+                        information and create a password below.
+                      </p>
+                      <div class="message message--error">
+                        <p>
+                          <strong>Error!</strong> Please fill out missing fields
+                          below.
+                        </p>
+                      </div>
+                      <p class="fine-print text-pom text-right">
+                        <em>Required</em>
+                        <span
+                          class="form-required"
+                          title="This field is required."
+                          >*</span
+                        >
+                      </p>
+                      <div class="twelve columns">
+                        <div
+                          class="form-item form-type-textfield form-item-fname"
+                        >
+                          <div id="HRFnmId-error" style="display: none">
+                            <font color="red">
+                              Please enter your first name.
+                            </font>
+                          </div>
+                          <label
+                            ><span
+                              class="form-required"
+                              title="This field is required."
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            class="form-text required"
+                            id="HRFnmId"
+                            name="fname"
+                            placeholder="First name"
+                            type="text"
+                          />
+                        </div>
+
+                        <div
+                          class="form-item form-type-textfield form-item-fname"
+                        >
+                          <div id="HRLnmId-error" style="display: none">
+                            <font color="red">
+                              Please enter your last name.
+                            </font>
+                          </div>
+                          <label
+                            ><span
+                              class="form-required"
+                              title="This field is required."
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            class="form-text required"
+                            id="HRLnmId"
+                            name="lname"
+                            placeholder="Last name"
+                            type="text"
+                          />
+                        </div>
+
+                        <div
+                          class="form-item form-type-textfield form-item-fname"
+                        >
+                          <div id="HRphoneId-error" style="display: none">
+                            <font color="red">
+                              Please enter your phone number.
+                            </font>
+                          </div>
+                          <div id="HRphoneId-error1" style="display: none">
+                            <font color="red">
+                              Please enter a valid phone number.
+                            </font>
+                          </div>
+                          <label
+                            ><span
+                              class="form-required"
+                              title="This field is required."
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            class="form-text required"
+                            id="HRphoneId"
+                            name="phone"
+                            placeholder="Phone number"
+                            type="text"
+                          />
+                        </div>
+
+                        <div
+                          class="form-item form-type-textfield form-item-fname"
+                        >
+                          <div id="HRaddressId-error" style="display: none">
+                            <font color="red"> Please enter your address.</font>
+                          </div>
+                          <label
+                            ><span
+                              class="form-required"
+                              title="This field is required."
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            class="form-text required"
+                            id="HRaddressId"
+                            name="address"
+                            placeholder=" Street Address"
+                            type="text"
+                          />
+                        </div>
+                        <div
+                          class="form-item form-type-textfield form-item-fname"
+                        >
+                          <div id="HRZipCodeId-error" style="display: none">
+                            <font color="red"> Please enter your Zipcode.</font>
+                          </div>
+                          <label
+                            ><span
+                              class="form-required"
+                              title="This field is required."
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            class="form-text required"
+                            id="HRZipCodeId"
+                            name="ZipCode"
+                            placeholder="Zip Code"
+                            type="text"
+                          />
+                        </div>
+
+                        <div
+                          class="form-item form-type-textfield form-item-fname"
+                        >
+                          <div id="HRurnmId-error" style="display: none">
+                            <font color="red"> Please enter your Email. </font>
+                          </div>
+
+                          <div id="HRurnmId-error2" style="display: none">
+                            <font color="red">
+                              This e-mail address is already in use. Please
+                              enter another e-mail address.
+                            </font>
+                          </div>
+                          <div id="HRurnmId-error3" style="display: none">
+                            <font color="red"
+                              >Please enter valid email address</font
+                            >
+                          </div>
+                          <label
+                            ><span
+                              class="form-required"
+                              title="This field is required."
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            class="form-text required error"
+                            data-error="1"
+                            id="HRurnmId"
+                            maxlength="255"
+                            name="edit-email"
+                            placeholder="Email"
+                            size="60"
+                            type="text"
+                          />
+                        </div>
+
+                        <div
+                          class="form-item form-type-textfield form-item-fname"
+                        >
+                          <div id="HRpassId-error" style="display: none">
+                            <font color="red"> Please enter password. </font>
+                          </div>
+                          <div id="HRpassId-error1" style="display: none">
+                            <font color="red">
+                              Your password must be at least 8 characters long,
+                              and contain letters and numbers.</font
+                            >
+                          </div>
+                          <div id="HRpassId-error2" style="display: block">
+                            <font color="blue">
+                              Your password must be at least 8 characters long,
+                              and contain letters and numbers.</font
+                            >
+                          </div>
+                          <label
+                            ><span
+                              class="form-required"
+                              title="This field is required."
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            class="form-text required error"
+                            data-error="1"
+                            id="HRpassId"
+                            maxlength="255"
+                            name="edit-pass"
+                            placeholder="Password"
+                            size="60"
+                            type="password"
+                          />
+                        </div>
+
+                        <div
+                          class="form-item form-type-textfield form-item-fname"
+                        >
+                          <div id="HRpassRId-error" style="display: none">
+                            <font color="red"> Please Re-Type Password. </font>
+                          </div>
+                          <div id="HRpassRId-error1" style="display: none">
+                            <font color="red">
+                              Password and Re-Type Password do not match.
+                            </font>
+                          </div>
+                          <label
+                            ><span
+                              class="form-required"
+                              title="This field is required."
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            class="form-text required error"
+                            data-error="1"
+                            id="HRpassRId"
+                            maxlength="255"
+                            name="edit-pass"
+                            placeholder="Re-Type Password"
+                            size="60"
+                            type="password"
+                          />
+                        </div>
+                        <br />
+                        <div
+                          class="form-item form-type-textfield form-item-fname captcha-field"
+                        >
+                          <label
+                            ><span
+                              class="form-required"
+                              title="This field is required."
+                              >*</span
+                            ></label
+                          >
+                          <div
+                            class="g-recaptcha"
+                            data-callback="recaptchaCallback"
+                            data-expired-callback="expiredCallback"
+                            data-sitekey="6LfjF74aAAAAAF3PZWvpYjVn2nNHUIkR_u2J89NW"
+                          ></div>
+                          <div id="g-recaptcha-error"></div>
+                          <br />
+                        </div>
+                      </div>
+                      <input
+                        class="btn--wide btn--xl create-account-btn btn disabled"
+                        id="j_id0:j_id29:HeadComId:HeaderCompId:CreateAccButton"
+                        name="j_id0:j_id29:HeadComId:HeaderCompId:CreateAccButton"
+                        onclick="ValidateRegistration();;A4J.AJAX.Submit('j_id0:j_id29',event,{'similarityGroupingId':'j_id0:j_id29:HeadComId:HeaderCompId:CreateAccButton','oncomplete':function(request,event,data){},'parameters':{'j_id0:j_id29:HeadComId:HeaderCompId:CreateAccButton':'j_id0:j_id29:HeadComId:HeaderCompId:CreateAccButton'} ,'status':'j_id0:j_id29:HeadComId:HeaderCompId:status'} );return false;"
+                        value="Create an Account"
+                        style="margin-bottom: 5px"
+                        type="button"
+                      />
+
+                      <p>
+                        Click the Create an Account button to create an account
+                        and continue.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="white-popup mfp-hide" id="password-modal">
+              <h1>Password Recovery</h1>
+
+              <div id="PassResetMsgId" style="display: none; color: green">
+                Reset password link has been sent at your email address. Please
+                check your mailbox.
+                <br />
+                <br />
+              </div>
+
+              <div id="PassResetId" style="display: block">
+                <p>Enter your username to receive a password recovery email.</p>
+
+                <input
+                  class="form-text required"
+                  id="usernameResetPassId"
+                  name="username"
+                  placeholder="Username"
+                  type="text"
+                /><input
+                  class="btn--wide btn--xl btn"
+                  id="j_id0:j_id29:HeadComId:HeaderCompId:ResetPasswordId"
+                  name="j_id0:j_id29:HeadComId:HeaderCompId:ResetPasswordId"
+                  onclick="ValidateForgetPass();;A4J.AJAX.Submit('j_id0:j_id29',event,{'similarityGroupingId':'j_id0:j_id29:HeadComId:HeaderCompId:ResetPasswordId','oncomplete':function(request,event,data){},'parameters':{'j_id0:j_id29:HeadComId:HeaderCompId:ResetPasswordId':'j_id0:j_id29:HeadComId:HeaderCompId:ResetPasswordId'} } );return false;"
+                  value="Send recovery Email"
+                  style="margin-bottom: 5px"
+                  type="button"
+                />
+              </div>
+
+              <p>
+                <a
+                  class="popup-modal"
+                  href="#login-modal"
+                  style="margin-bottom: 5px"
+                  >Return to the login screen</a
+                >
+              </p>
+            </div>
+            <div class="white-popup mfp-hide" id="account-modal">
+              <h1>Create an Account</h1>
+              <div class="message message--success">
+                <p><strong>Success!</strong> Your account has been created.</p>
+              </div>
+              <br />
+
+              <p>Click Next to continue to the report verification screen.</p>
+            </div>
+
+            <div
+              class="white-popup accessibility-popup-position mfp-hide"
+              id="accessibility_popup"
+              title="Basic dialog"
+            >
+              <h3>Accessibility Tools</h3>
+              <div class="row">
+                <div class="five columns">
+                  <span style="color: lightgrey; font-size: 24px">&nbsp;</span>
+                  <a
+                    href="javascript:;"
+                    onclick="BrowseAloud.panel.toggleBar(true,event);return false;"
+                    title="Turn audio/vision assist on/off"
+                    >Turn audio/vision assist on/off</a
+                  >
+                </div>
+                <div class="four columns">
+                  <span style="color: lightgrey; font-size: 24px">|</span>
+                  <strong class="high_contrast_switcher_label"
+                    >Contrast:</strong
+                  >
+
+                  <span class="high_contrast_switcher_normal">
+                    <a
+                      class="disable_link"
+                      href="javascript:defaultContrast();"
+                      id="high_contrast_switcher_normal_id"
+                      title="Set contrast to normal"
+                      >Default</a
+                    >
+                  </span>
+
+                  <span class="high_contrast_switcher_separator">/</span>
+
+                  <span class="high_contrast_switcher_high">
+                    <a
+                      href="javascript:addHighContrast();"
+                      id="high_contrast_switcher_high_id"
+                      title="Set contrast to high"
+                      >High</a
+                    >
+                  </span>
+                </div>
+                <div class="three columns">
+                  <span style="color: lightgrey; font-size: 24px">|</span>
+                  <span
+                    >&nbsp;&nbsp;<a
+                      href="https://www.sandiego.gov/accessibility"
+                      title="More information on accessibility"
+                      >More Info</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:LurnmId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:LurnmId"
+            /><input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:LpassId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:LpassId"
+            />
+            <script type="text/javascript" language="Javascript">
+              function dpf(f) {
+                var adp = f.adp;
+                if (adp != null) {
+                  for (var i = 0; i < adp.length; i++) {
+                    adp[i].parentNode.removeChild(adp[i]);
+                  }
+                }
+              }
+              function apf(f, pvp) {
+                var adp = new Array();
+                f.adp = adp;
+                var ps = pvp.split(",");
+                for (var i = 0, ii = 0; i < ps.length; i++, ii++) {
+                  var p = document.createElement("input");
+                  p.type = "hidden";
+                  p.name = ps[i];
+                  p.value = ps[i + 1];
+                  f.appendChild(p);
+                  adp[ii] = p;
+                  i += 1;
+                }
+              }
+              function jsfcljs(f, pvp, t) {
+                apf(f, pvp);
+                var ft = f.target;
+                if (t) {
+                  f.target = t;
+                }
+                f.submit();
+                f.target = ft;
+                dpf(f);
+              }
+            </script>
+            <script>
+              function DoLogin() {
+                SfdcApp.Visualforce.VSManager.vfPrepareForms(["j_id0:j_id29"]);
+                if (typeof jsfcljs == "function") {
+                  jsfcljs(
+                    document.forms["j_id0:j_id29"],
+                    "j_id0:j_id29:HeadComId:HeaderCompId:j_id52,j_id0:j_id29:HeadComId:HeaderCompId:j_id52",
+                    ""
+                  );
+                }
+                return false;
+              }
+            </script>
+            <input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:RFnmId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:RFnmId"
+            /><input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:RLnmId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:RLnmId"
+            /><input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:RphoneId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:RphoneId"
+            /><input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:RaddressId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:RaddressId"
+            /><input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:RZipcodeId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:RZipcodeId"
+            /><input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:RurnmId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:RurnmId"
+            /><input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:RpassId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:RpassId"
+            /><input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:RpassRId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:RpassRId"
+            /><input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:captchaSuccId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:captchaSuccId"
+            />
+            <script>
+              function DoRegistration() {
+                SfdcApp.Visualforce.VSManager.vfPrepareForms(["j_id0:j_id29"]);
+                if (typeof jsfcljs == "function") {
+                  jsfcljs(
+                    document.forms["j_id0:j_id29"],
+                    "j_id0:j_id29:HeadComId:HeaderCompId:j_id53,j_id0:j_id29:HeadComId:HeaderCompId:j_id53",
+                    ""
+                  );
+                }
+                return false;
+              }
+            </script>
+            <input
+              id="j_id0:j_id29:HeadComId:HeaderCompId:ReseturId"
+              type="hidden"
+              name="j_id0:j_id29:HeadComId:HeaderCompId:ReseturId"
+            />
+            <script>
+              function DoResetPassword() {
+                SfdcApp.Visualforce.VSManager.vfPrepareForms(["j_id0:j_id29"]);
+                if (typeof jsfcljs == "function") {
+                  jsfcljs(
+                    document.forms["j_id0:j_id29"],
+                    "j_id0:j_id29:HeadComId:HeaderCompId:j_id54,j_id0:j_id29:HeadComId:HeaderCompId:j_id54",
+                    ""
+                  );
+                }
+                return false;
+              }
+            </script>
+
+            <script>
+              function FillUserName() {
+                document.getElementById("usernameResetPassId").value =
+                  document.getElementById("usernameId").value;
+              }
+            </script>
+
+            <script>
+              function ValidateLogin() {
+                var username = document.getElementById("usernameId").value;
+                var password = document.getElementById("passwordId").value;
+
+                var usernameId = document.getElementById("usernameId");
+                var passwordId = document.getElementById("passwordId");
+
+                var usernameEId = document.getElementById("usernameId-error");
+                var usernameEVId = document.getElementById("usernameId-error1");
+                var passwordEId = document.getElementById("passwordId-error");
+
+                if (username == "") {
+                  //alert('Please enter your username.');
+                  usernameId.style.cssText = "border: 1px solid red";
+                  usernameEId.style.cssText = "display:block";
+                  return false;
+                } else {
+                  usernameEId.style.cssText = "display:none";
+
+                  if (!validateEmail(username)) {
+                    //alert('Your username must be in the form of an email address.');
+                    usernameEVId.style.cssText = "display:block";
+                    return false;
+                  } else {
+                    usernameId.style.cssText = "";
+                    usernameEVId.style.cssText = "display:none";
+
+                    if (password == "") {
+                      //alert('Please enter your password.');
+                      passwordId.style.cssText = "border: 1px solid red";
+                      passwordEId.style.cssText = "display:block";
+                      return false;
+                    } else {
+                      passwordId.style.cssText = "";
+                      passwordEId.style.cssText = "display:none";
+
+                      document.getElementById("").value = username;
+                      document.getElementById("").value = password;
+
+                      DoLogin();
+                    }
+                  }
+                }
+              }
+
+              function ValidateRegistration() {
+                var Fname = document.getElementById("HRFnmId").value;
+                var Lname = document.getElementById("HRLnmId").value;
+                var Phone = document.getElementById("HRphoneId").value;
+                var Address = document.getElementById("HRaddressId").value;
+                var Zipcode = document.getElementById("HRZipCodeId").value;
+                var Username = document.getElementById("HRurnmId").value;
+                //var Email = document.getElementById('HRemailId').value;
+                var Password = document.getElementById("HRpassId").value;
+                var Repassword = document.getElementById("HRpassRId").value;
+
+                var FnameId = document.getElementById("HRFnmId");
+                var LnameId = document.getElementById("HRLnmId");
+                var PhoneId = document.getElementById("HRphoneId");
+                var AddressId = document.getElementById("HRaddressId");
+                var ZipcodeId = document.getElementById("HRZipCodeId");
+                var UsernameId = document.getElementById("HRurnmId");
+                //var EmailId = document.getElementById('HRemailId');
+                var PasswordId = document.getElementById("HRpassId");
+                var RepasswordId = document.getElementById("HRpassRId");
+
+                var FnameEId = document.getElementById("HRFnmId-error");
+                var LnameEId = document.getElementById("HRLnmId-error");
+                var PhoneEId = document.getElementById("HRphoneId-error");
+                var PhoneEVId = document.getElementById("HRphoneId-error1");
+                var AddressEId = document.getElementById("HRaddressId-error");
+                var ZipcodeEId = document.getElementById("HRZipCodeId-error");
+                var UsernameEId = document.getElementById("HRurnmId-error");
+                //var UsernameEVId = document.getElementById('HRurnmId-error1');
+                var UsernameEV1Id = document.getElementById("HRurnmId-error2");
+                var UsernameEV2Id = document.getElementById("HRurnmId-error3"); //NEW
+                //var EmailEId = document.getElementById('HRemailId-error');
+                //var EmailEVId = document.getElementById('HRemailId-error1');
+                var PasswordEId = document.getElementById("HRpassId-error");
+                var PasswordE1Id = document.getElementById("HRpassId-error1");
+                var PasswordE2Id = document.getElementById("HRpassId-error2"); //NEW
+                var RepasswordEId = document.getElementById("HRpassRId-error");
+                var RepasswordEVId =
+                  document.getElementById("HRpassRId-error1");
+
+                var phonePattern =
+                  /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+
+                if (Fname == "") {
+                  // alert('Please enter your first name.');
+                  FnameId.style.cssText = "border: 1px solid red";
+                  FnameEId.style.cssText = "display:block";
+                  return false;
+                } else {
+                  FnameId.style.cssText = "";
+                  FnameEId.style.cssText = "display:none";
+
+                  if (Lname == "") {
+                    //alert('Please enter your last name.');
+                    LnameId.style.cssText = "border: 1px solid red";
+                    LnameEId.style.cssText = "display:block";
+                    return false;
+                  } else {
+                    LnameId.style.cssText = "";
+                    LnameEId.style.cssText = "display:none";
+
+                    if (Phone == "") {
+                      //alert('Please enter your phone number.');
+                      PhoneId.style.cssText = "border: 1px solid red";
+                      PhoneEId.style.cssText = "display:block";
+                      return false;
+                    } else {
+                      PhoneEId.style.cssText = "display:none";
+
+                      if (!phonePattern.test(Phone)) {
+                        //alert('Please enter valid phone number.');
+                        PhoneId.style.cssText = "border: 1px solid red";
+                        PhoneEVId.style.cssText = "display:block";
+                        return false;
+                      } else {
+                        PhoneId.style.cssText = "";
+                        PhoneEVId.style.cssText = "display:none";
+
+                        if (Address == "") {
+                          //alert('Please enter your address.');
+                          AddressId.style.cssText = "border: 1px solid red";
+                          AddressEId.style.cssText = "display:block";
+                          return false;
+                        } else {
+                          AddressId.style.cssText = "";
+                          AddressEId.style.cssText = "display:none";
+
+                          if (Zipcode == "") {
+                            //alert('Please enter your address.');
+                            ZipcodeId.style.cssText = "border: 1px solid red";
+                            ZipcodeEId.style.cssText = "display:block";
+                            return false;
+                          } else {
+                            ZipcodeId.style.cssText = "";
+                            ZipcodeEId.style.cssText = "display:none";
+
+                            if (Username == "") {
+                              //alert('Please enter your username.');
+                              UsernameId.style.cssText =
+                                "border: 1px solid red";
+                              UsernameEId.style.cssText = "display:block";
+                              return false;
+                            } else {
+                              UsernameEId.style.cssText = "display:none";
+
+                              if (!validateEmail(Username)) {
+                                //alert('Your username must be in the form of an email address.');
+                                UsernameId.style.cssText =
+                                  "border: 1px solid red";
+                                UsernameEV2Id.style.cssText = "display:block";
+                                //UsernameEVId.style.cssText = "display:block";
+                                return false;
+                              } else {
+                                UsernameId.style.cssText = "";
+                                UsernameEV2Id.style.cssText = "display:none";
+                                //UsernameEVId.style.cssText = "display:none";
+
+                                if (Password == "") {
+                                  //alert('Please enter your password.');
+                                  PasswordId.style.cssText =
+                                    "border: 1px solid red";
+                                  PasswordEId.style.cssText = "display:block";
+                                  return false;
+                                } else {
+                                  PasswordEId.style.cssText = "display:none";
+
+                                  if (Password.length < 8) {
+                                    //alert('Password length should be greater than 8.');
+                                    PasswordId.style.cssText =
+                                      "border: 1px solid red";
+                                    PasswordE1Id.style.cssText =
+                                      "display:block";
+                                    PasswordE2Id.style.cssText = "display:none";
+                                    return false;
+                                  } else {
+                                    PasswordId.style.cssText = "";
+                                    PasswordE1Id.style.cssText = "display:none";
+                                    //PasswordE2Id.style.cssText = "display:block";
+
+                                    if (Repassword == "") {
+                                      //alert('Please enter your re-type password.');
+                                      RepasswordId.style.cssText =
+                                        "border: 1px solid red";
+                                      RepasswordEId.style.cssText =
+                                        "display:block";
+                                      return false;
+                                    } else {
+                                      RepasswordEId.style.cssText =
+                                        "display:none";
+
+                                      if (Password != Repassword) {
+                                        //alert('Password and Re-Type Password do not match.');
+                                        RepasswordEVId.style.cssText =
+                                          "display:block";
+                                        return false;
+                                      } else {
+                                        RepasswordId.style.cssText = "";
+                                        RepasswordEVId.style.cssText =
+                                          "display:none";
+
+                                        document.getElementById("").value =
+                                          Fname;
+                                        document.getElementById("").value =
+                                          Lname;
+                                        document.getElementById("").value =
+                                          Phone;
+                                        document.getElementById("").value =
+                                          Address;
+                                        document.getElementById("").value =
+                                          Zipcode;
+                                        document.getElementById("").value =
+                                          Username;
+                                        //document.getElementById('').value = Email;
+                                        document.getElementById("").value =
+                                          Password;
+                                        document.getElementById("").value =
+                                          Repassword;
+
+                                        var UserExist = "";
+
+                                        Visualforce.remoting.Manager.invokeAction(
+                                          "TSWLoginRegisterCtrl.CheckIfUserExist",
+                                          Username,
+                                          function (Result, event) {
+                                            if (Result == true)
+                                              UserExist = "Yes";
+                                            else UserExist = "No";
+                                          },
+                                          { escape: true }
+                                        );
+
+                                        var t = setTimeout(function () {
+                                          if (UserExist == "Yes") {
+                                            UsernameId.style.cssText =
+                                              "border: 1px solid red";
+                                            UsernameEV1Id.style.cssText =
+                                              "display:block";
+
+                                            return false;
+                                          } else {
+                                            UsernameId.style.cssText = "";
+                                            UsernameEV1Id.style.cssText =
+                                              "display:None";
+                                            document
+                                              .querySelector(
+                                                ".create-account-btn"
+                                              )
+                                              .classList.add("disabled");
+                                            DoRegistration();
+                                          }
+                                        }, 2000);
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              function validateEmail(email) {
+                var re =
+                  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+              }
+
+              function ValidateForgetPass() {
+                var username = document.getElementById(
+                  "usernameResetPassId"
+                ).value;
+
+                if (username == "") {
+                  alert("Please enter your username.");
+                  return false;
+                } else {
+                  document.getElementById("").value = username;
+
+                  document.getElementById("PassResetMsgId").style.display =
+                    "Block";
+                  document.getElementById("PassResetId").style.display = "None";
+
+                  DoResetPassword();
+                }
+              }
+            </script>
+            <script
+              crossorigin="anonymous"
+              integrity="sha256-VCrJcQdV3IbbIVjmUyF7DnCqBbWD1BcZ/1sda2KWeFc= sha384-k2OQFn+wNFrKjU9HiaHAcHlEvLbfsVfvOnpmKBGWVBrpmGaIleDNHnnCJO4z2Y2H sha512-gxDfysgvGhVPSHDTieJ/8AlcIEjFbF3MdUgZZL2M5GXXDdIXCcX0CpH7Dh6jsHLOLOjRzTFdXASWZtxO+eMgyQ=="
+              src="https://www.browsealoud.com/plus/scripts/3.1.0/ba.js"
+              type="text/javascript"
+            ></script>
+
+            <script>
+              var l = document.createElement("a");
+              l.href = window.location.href;
+              var pathname = l.pathname;
+              var browserName = (navigator.sayswho = (function () {
+                var ua = navigator.userAgent,
+                  tem,
+                  M =
+                    ua.match(
+                      /(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i
+                    ) || [];
+                if (/trident/i.test(M[1])) {
+                  tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+                  return "IE " + (tem[1] || "");
+                }
+                if (M[1] === "Chrome") {
+                  tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+                  if (tem != null)
+                    return tem.slice(1).join(" ").replace("OPR", "Opera");
+                }
+                M = M[2]
+                  ? [M[1], M[2]]
+                  : [navigator.appName, navigator.appVersion, "-?"];
+                if ((tem = ua.match(/version\/(\d+)/i)) != null)
+                  M.splice(1, 1, tem[1]);
+                return M.join(" ");
+              })());
+
+              /******************************  Browser compatibility alert start ********************************************/
+              $(document).ready(function () {
+                if (
+                  sessionStorage.getItem("isFlag") == "undefined" ||
+                  sessionStorage.getItem("isFlag") == null
+                ) {
+                  sessionStorage.setItem("isFlag", true);
+                }
+
+                setTimeout(function () {
+                  var browser = (function () {
+                    var ua = navigator.userAgent,
+                      tem,
+                      M =
+                        ua.match(
+                          /(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i
+                        ) || [];
+                    if (/trident/i.test(M[1])) {
+                      tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+                      return { name: "IE", version: tem[1] || "" };
+                    }
+
+                    if (M[1] === "Chrome") {
+                      tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+                      if (tem != null) {
+                        return {
+                          name: tem[1].replace("OPR", "Opera"),
+                          version: tem[2],
+                        };
+                      }
+                    }
+
+                    M = M[2]
+                      ? [M[1], M[2]]
+                      : [navigator.appName, navigator.appVersion, "-?"];
+
+                    if ((tem = ua.match(/version\/(\d+)/i)) != null) {
+                      M.splice(1, 1, tem[1]);
+                    }
+
+                    return { name: M[0], version: M[1] };
+                  })();
+                  if (
+                    !(
+                      browser.name.toLocaleLowerCase() == "chrome" ||
+                      browser.name.toLocaleLowerCase() == "firefox" ||
+                      browser.name.toLocaleLowerCase() == "safari" ||
+                      browser.name.toLocaleLowerCase() == "edge"
+                    )
+                  ) {
+                    if (sessionStorage.getItem("isFlag") == "true") {
+                      /*$.alert({
+                        title: 'Alert!',
+                        content: 'The Get It Done website is known to work with the latest versions of Chrome, Firefox, Edge, and Safari. The browser you are using does not appear to be supported. If you are experiencing difficulties using this website, please switch to a supported web browser.',
+                        boxWidth: '80%',
+                        useBootstrap: false,
+                        draggable: false
+                    });*/
+                      alert(
+                        "The Get It Done website is known to work with the latest versions of Chrome, Firefox, Edge, and Safari. The browser you are using does not appear to be supported. If you are experiencing difficulties using this website, please switch to a supported web browser."
+                      );
+                      sessionStorage.setItem("isFlag", false);
+                    }
+                  }
+                }, 5000);
+              });
+              /******************************  Browser compatibility alert End ********************************************/
+            </script></span
+          >
+          <div id="j_id0:j_id29:j_id100"></div>
+        </form>
+        <span id="ajax-view-state-page-container" style="display: none"
+          ><span id="ajax-view-state" style="display: none"
+            ><input
+              type="hidden"
+              id="com.salesforce.visualforce.ViewState"
+              name="com.salesforce.visualforce.ViewState"
+              value="i:AAAAWXsidCI6IjAwRDYxMDAwMDAwWW9adyIsInYiOiIwMkd0MDAwMDAwMFR3MGQiLCJhIjoidmZlbmNyeXB0aW9ua2V5IiwidSI6IjAwNXQwMDAwMDAwRjhNVCJ9f5Z2HtvmhNUIiL950awv3QD1DvYsAon2232OdwAAAYCrDHtU8a3xXw672rnRYdp5J+3cZWbKWrOtLtPhJ7XljfZEPKjN/N3DIcemcafVbCb4HdC2XGgiayckGcmpmWOYHJpLS2Y+NWOtbKwaEUixM3f7qRcFLm2r65/JKPQCaTnf42tOHX70ui3kVLe0UzKpiC9n3MDAKptBPXw8BzJEnKaBXegS7WaoB7M7v3u/YeDZR8t16JRumbQwkGo9zz1/fYjwZCaG6rHg4hRO2qn71vPEcD9ic3N7GIpn/az3r9ZdW3NzBTeKgXuekHIEB+OSkNSN4s3WNnHY7nSfJLAIDcbbNsVKjq9HBOj7A4mWl8nWh6Qm3QeWB+DxM+2M8HlCoR25UcUnttrZbRvzcJKEMJ3UftEbJAD0qgD7P083/sCDZoj3NvfcKDI31WdIW2FD5seufKh5ljPiMm0XQwYTAi34ZyV5NpcyRpQBQ1Sn2eFHEiFxonCk/Z8CXvoQH5STo+mB3bMrw7Ry7b6H9i48UjUAeglX/j3rhJEnOVbJ93nrTTJXo3VJyjuGim+1U8WMhewn84yxI/9Zg9ZdD0KliiGyJbp2O2ufwVKqgVTD/qqQ1MwWp9CrcY2aIJmJW9RHoCY8seLesG0GocMsdxJs4xO7TpDwonXKQhAtdb/ybfko/+Ajyjl0Pl9Kixfbmu/ZIAutWFaXEMzVyaBBz2TtZ0KQ8vPSRHuh+O5vhf6xaTZV+YNOEmW7OoZACngY+Tyv8M5gDRQLELWAoUclup1+wOYEVFi+fmEGBo/3RJl7LwAOufZUs0y8qtwYGQekL79M4negVXg2ptJwE2VnFYLEzVzTgKw/hFtlH3hU7kY6vj3TKeVxR56MCC2zTBt16jvbHiYfL/1m3FEFIpgUnX1rHvf7vjEE5elxE303UwTM7okIhi+iBXxioUywDo4nZYTYjNplqLYA/VYNGZiNhPA0NeUQFPxdHAtnvckUPnv9xfgYWXnJ4VloZUdXpZy/cerG/PW1FUNbzU9il6hNH0Uktke77nOsja3jztt8J9JEXLcMc8KeogtIafc/BgiHzUvS+tckby/17C5lQxiudmdTPW5KcTRUcI8oJTWLFfA3BYtvhYG2O1XtAcjCWnEVfk1QTwR8T+zN8jdsLTSSEmV1ACkXdWS+nvwX807PnorrhmjtlbKFpArsR7/v3kXPsXRj3m2yzoE/JMEV7U7bCgSQRzIJFS6loCLx3Fp/lQXDo/7K4fwPdi0npHeWYbYRp8kHpB9exYU+yjN6Mv2axRd07Ui+2SNH+sWY2sXkUh8jhRC0ySEFE1AuXyRRZ5GynJHgDlwJwkV5o0wdIPQ85PFPBynQPlFcdt7ecoLa22y7yI28V+N/OHD4uXI0AbrQR1zJNP6pJB53KFD/nH1SD/sPJVbjNsEY3GqrFMAsoUnmIOas/A5nefZ1e/QLEzId2bkfT0zoxNo5BuDCAy3lh7+3EnXEVnJj9lG1F9moN28T9sQYg7abOoa5DrNDRFyZI3LX2T7qaDM7rOjmbeqrc5xUHNps6fUlOWlMN/qOdoxzBD2pR/Wb0lzr/dWM7GVffYkgi6GDDsmHTl80NbJCx2/XDb3iD8FApA9NV9Pms9t56StHVHVSVY60Wcs5to+QvTDHTxFS4YfcyFmXyFPwckDzwvna7D6xP8kKyhsnBoJsh3KuXsffpSHgi43Go7+3y5ubHNvDIt2A/K0ZHB2EYUcYXmw0Pg5KUftXBA2l1vWm0lOWtmpzx9SQixAKSe+Y6FBZmIojevpi9TpczpeJY+9Ai9dWMxAXXsEwAtRRNIUh6r4cHXIKXsa842StSfrPh95T+PVVGjyRQIb9GHwC8lyU/rZEUNn4MMMAvzRJCJO7f1W1H3PXtsyrqRaeAFpM2f83oudWWpluPFB40F6cD7TFlxlNJDdYmvPdABsSre/wyUHggfEa4YocNw3cF9Y2Oyw5yEpV+BZnoqmeGaSfQUlZlokopKKfaQFmvrPHxpRWcl5oiSHNtyMvZdmVzuB65njTAaAQg4DepSF78ADRcAZovWg4JB8IqI8hDonpJ2gSVtnvgmRfUcgLsDCFt7IZbS7ijaxCu/3KDj8wmpNM94A6ms+rQoPZfGBLBClUZbHJFYPrJ7OkyDMLsq8sC1XGUY7qWrHd5C081lWwhyRtbD7LdB0Ypg3my4/8k/unG8qieZjJbwZqKgSuewULerNXOZQRi3N/6t74jGKfG4do3ao8daE4wY5hzIe4uc5mojceTef9bWQUzTNIGP2+Isk7L0ZUsU3a9Z144D4P0qjONNq1Eo+tFdMDBDhEKxdC7idRTHHOZOm7+H7wlmDfM3T0MLHVA5bEv2YcdybO9OdFojfDrrLPf+CQx2Bn6+RkW0imxgmd3M6A8oCyKlZoYvoz8jVoQDrD2yspPGE5PtdkVnJGOIVIPV4zjiP6yB2BWRvXk3CaTpPCDnc9CDX4g/NqDQ+kqtAk7BFq0lKwXX7P/fZd5zE7UnEN/ynxiR4RqgYAhwAKpIFm6J33/tmIoQE7V5/MDFrJsAdh+84yOS+eXrRwAXPNheZXtayk9eHZBy6/PZlGZ4wd4WPuhBLtT58lDP+x40CGuRC3ABj0H9Uov1qWmusWVQ+jCxVashnW1qtpwS1qELrjIr98Spdtt52kPJKVyHiDOiiJYn4vGn57Wn9beGvvB7surig6L5FIzm340v29PyGqfZ/XZVw02k286jBX+AKMixlGTblAabJaR1B/aioIUvaTXl4KyWFu8tfDF/cBo4dL+K3pC5KOSD56aDybmp8Ep8r0F/HaADGno1bCYrmFpoGcQFUn7ej/IWRHFdufRsV9KnJsbIaR5/ppPRox8LUY7d5JiGybQ15tXW4PraVhWHuNwnpeEP8qD7ICBhKMtZn/mdM2x5gZDMeQzICUdeOeohdpHQcZZ4QVVfpWqucHBUYUH7Zl9fDfrns1uTgoE5X2jyfyG6pUc3N9N25GBCaQ72VkCSdhnSDpSkZqRSmNZnXjGEtvhLZ9sAH7e0xtp9RxYKxNfcgnTo84cq261YuWaS+tTpEVzIJ+fX73s0k82eDf9Kw61lEshTzZyK6jsfRdP1+C1S/IMkAcltAAFFQgUrHP+m9INVxdui7DPJPciRZcEBNH0OYDMG5DrYTmIljAzoaQQfv8CtO/pLg6fS4gMenX2HSeu0yqziPIesn5sX5meQmoX3AgfvbTPhly3P5Aj2N1DOEFr5nimneBQyUhqEZwGDtNkn85H0Dnpln1maScwKduqtlURjvpNT5Srm68YMwg28sf5zKO0XUvOayDDchXSDX8W18kIUMkAB1OTvptWDo4CM7cnVxdf/Nm+rHg1TIR9F1D671hvond5uk+ST2SCetPfZbs9N44ekeuani9SRCsd+2rHYTLPZYz2cVJap/J5r47ORwAXqigcAoRakCgyRrPYHxEHSB5eb1KvCJ7t4Rc0f3So3CDe+KDCcZ5hgL6+zQrDepfCk5myIMCaBVM70ceqaLQhgl8xHgL0KH6JKkIVe7IfP7H4Htl1qZyFVwnuxlO/iYtkTH4qrkfeR+H5dr9aS8SjQ173c4BwR+cVlvvSzxaPqyQe9LNsOPGUWWR6hdnBoGBwfzNPW8DiLgTpgTGh1zOGpvKNQoFMA4K4BNThRJY0k4AuQ3R9kg2fgXZTYF8hNy1v9eBHVDeGs5qyHnPS1kKkblUnKYGtLh5OzJSOpULt7Pqu3TKs3pn10YzNEdm56+CGBHLXG6sKY+O/NsOc+1Amb7L7saawey2b3shOQpGkCGfeH2AGMzeskrFKNRU+SJnrmL2CuV0jr6noe03JoK8WUratl2pqj1SC+WHaXylh0nfxPFS4Mj6HnsMhdl3EuEinDyyx/3RTWZx/DJ5VHnIH1SCoM1o/fnqUZ/Ts7fEL5jvl7ACW8DdBgB3GnAGSgpwUp/fWEGGhfld6efmier1n/sth+TCyDXgDFGeUeUk8no0EPqu/fTC5bdlOE8VWBNnOqpovwCeK7JWzPdSWFNplhTEuQDu5x+g4IU8s3Eu5Q+wBuZebQx2/nKi5XAEdeoMcWpFdUcUp94iN7gJBZ/RrJLUIcM3muTatOpPC6WlVg21+jdPpH8WoOnT4NH1h2AosrSNfyRurJ9Iu0u6r7pG4S2Aa5b6O8d2Yybx59MEnae6y4YcRK7L/G1vClvyB4zBxwOy1+CfR1ajSvATByYuz2/W+oQkhYe9NDFN4JXxtiZRi4Lv00ij8GeOW6nRNddqNwFqJotg/liC1lrs4A6hIWV5/RaYO+cmN3paWwBbDrcKynYGVKwiA/VvAK4UMJ6HuT8KoUDmZzu7MSc1vBTfSthEzaGVdNZIGH0Rh+QLk9QKdNkFWMVZ/Cb7kBPGXexu2752RZPyrSKsnoRNH+dk0GJDJtr2eDwldgEivJBP5fXfsBEz+Es/80UJskofbt/Pu5eIXw+fCAbv/uguYetWvGCAH1isCjgJX4C+LGxScMEL9sZJdDWKCDOe8I5ls3upDj0o/DQBljUvoDSGp0C9NdRsC0sJ3WWvFWmuQpUNutzZE7BCYowqQAfX2XdGzzPm/qWIP2wXL4rRkCcQUzvkh1y3tR+S/biHqkzneOIyWqoMr/PL885FKULD7RuoWEk2JTRGcCcpBpe6TdAi9zghJt2H+psdGmmBAPhl+wdlXN1B3zEWPAj7fhVVzWgWSbdphHdq5b2K3g0pivwMcQxee44PE/CxGqbWvYWh66HYzG4+I5hjPYAABepwEgntEUFV8VBFnW9WdtpF3KgWBP8Tg9gpeen4ARj3tYaSA5pJdTmm9E+U54s1uECrYoJctnym1Ry+4NoGK4xuKJg/F+dQwGMPyKTXIY2IEcXPj6BRvje/gJHzQwou7I2WARHGlADuYLZG1+d5z3fsMALwQivv6czx3pdpuUy1j0kMPS/Danfm9QFV6UuX9PnLHMKS5kVxmYEu3K5fZmX68z4I5XVxwNN3FjNw9qZVnxZLBAfuM+9bmjxbZcCdIaiVreKqz5BgYZNCrQdSsIFAVFnA4Z9DuY89UncgTHZQxlrDq4YK/95t3DcR+/bfVRJdQfCqRKjb7YcURW9xCZqZ9iTiH2Yq54CV0FFBpE2pDuxs6/HN9h3xY+gtJpMifXg+g0Z+sBqsmFYQCtKAhXYcUefxRqpxl8Vy7gZul3oJOO0EcxVA0eQ+aIWUwIQ/UWoPhcIUPtyvrt9qUM8DBSVVqcTiG59VvU8yIDwUAFpENCb/OpTlFDm8wQU8322cyZRrouUnTSAhW4L5y2bKVJKL7wxQB24oTro6TahHTOnvBuDqgLEnSSFVxpuMN48TH9ibZHbax6/G5cvIKMqKvkECyjY+7zHDB7IRhHPPRc9YobGFjd32Nvd/uuy6o9aFikhW9V+XXoUP9u/FgedbBDPU0b/0d8VZCjyFrjg5cg0AHoewc+JsnGTxEOaOke1YPOOiHRP3Rro2C37NPJs18PCsDWREBRjhOFcxpQuC8gBK5EOyxtWmLjLpVDLzWnVAZBX0CvGTS9bxtEmDIkTbwo4h52sJlDut0nUG9cF15/b9BBP+h5+h1p6xuY858r1iMwNMDV1owFfCzzVfXgRKrupHJD3/FqBG9DcfFkbcx920n3o39zVeLIvYeZHsGdOfK/2rVvwbgi57OpEO+QLWmqFn1hZIS5g+wO1xfc3DLToRYbRBpbRAsZA9b9v9448jckIvpgypviONjPgIqolYEAfwRbUIemqDuV6gpnJXdCo1AieUXfk8xLqDH6ni9ni394hwkBh1cGrr95pdh+7OJWrM+YCP306AiFurAjgTdPBt/z3xKQ+uZ5PfM3Euf0In7MqikFsP14qY44cvH3g6ASj6Lntz/HuNsWTkz/DGb1R0OJBddGFAK4rlVvd1W4zbs0XVfA4vjnutrJ4uCQf+Gt+pf2VKkVPgvIDkDMpRQbZgpCLJqHyp4fJvhZKeOzxWp8fBo45jGaNTtEhaJzBPJD624lUYJH0naS9nmcDdnD3bj/GAo6zHYNKOyAXbZo3hYK/UXXOWDlr4adiWwLCk1qpGonW4VUGtDfTrfUhJT7CpbG2y3UG50Qp+hp5rm0Dc+PuyeibrpskBOjeOfPsL8JHnfTcUpE+TmdEWc5gORrJcLa2+UZhb+ydBNLQTW1HoPXhen7Ne9X7Oc3VMRh5r+wJg/xo2QB5uLET+dBe061zx+9XhTX4fu8p/5+LLRrfA8lLAY6qX0gCKdm/Qx0CcEGGHUGeRCA5cyns4qHl6+NwwVZTbYNAVgu1nWChCYEaRlnjzC8p5cUa0gDreOAE04ZcWOZShc+7X5vuv2O1pv9zErYF72IbqbgC5t8N8oMCusu7+XwL85C2pfv5wZsWQVzjfC96mUWGQKQ3zyzMxPZaDoqF2r3Xi7MePlu9vW13SEhQVaLnqAmTCGCpHh3oO5d+ffkezReytU1zGrUCKPxd+KlFtv/YrtlwLXV02KQ3FVTyxQOAGVyqlPYzC73V7FLE03keseoUO/YjokQ2NdpeLZWpJ1sAC1M9/hCfvouBqS26IltmaaGf/ySCUwcoW2tNq1GJgcC3LI5XRwovFQvG70w80qF95+0G4X5e+G5vb2Xj6trQfj3s1NkLYdOkgogLrwuyZXkEz5X9xAHtQD4iArAAn8AGhMzh7sD20BeANtPNGUNeXt1ZNjsqXXtzipBT3VGBOXEHSKSQf8C6yXVYIVhxVA1ucN90rAB/0TtOIQLosM30zGXo61sQEm6dSLXFO86fjFZ38x0bc1NzqWeA6hYmH3wwOLzYcThJUIWSJOeD0sxeYKPtOz9sWeiT3veuFAG0Dk29LoT61QKjjBgDIBNE/ox/LYWE9WJ5QkF2RLzks6UXLwdgN+Du9S4TH4KQG2yx/woLe0D5aqFompdKxcFY6Uf6wGBLcxo1DZJOGleaDuWVxxF8IJrJPoaiQweNESdysjLeVIXbViuKcXnSfUvJz1ubxT3DyANSAvL0tjkniJ+Cez0zPv080dmoMgrnWQ5N9hyT+PyeEferG9XjJrlw7I0HD4XYN6OuNy1O70/KpGUQSf9X8MA5zIRtIOrJeM0XmmzKtBdgRL1QhgIGPS0Yp/4giS5t+gDxHQbgXZx9RFA0N37DYAy/YQpM3ufv/3nIzGEp6frwL48yXSJ8oyxepSMYG5I2SQ1Ocpx15TejXgB6TThQc8PvLmDgPIWJjb+O51twK7wAVBdXL+0qoTEfWVt24rNL6S1DJYEYPfoQxulwetZFLHYFlQWtHL/p9RccZCWA2JOIkYWJkAFKecQ8YiHsO7L6YUmBDJd0SCIKnCe0M7z7AWzaGAyhyOZktuD1RyTHH6b4ks7NjNdgEE1blHVxPR5rNhpWXnCHu1wC6B+mULKnAs1w+wyyEdrA423GxPy0BRP+oSPY9NYij1RDsgO07mOEovByNHeaeHSwgTAC9AOi6qUBl4b8Gx5i2EQLgNwOhrlCd0NAxMNZ4+KNZdW26VIRvUiDj0YQgLwH6Zf04jVzvi2q3wKviHaRKZWqn6hCeY+gIPT1WZ3Sek5YqK8T6JDORTu/ksCzA/MY9mXJDfM/wU7n9OH3O3PGzsG32enUsGg8ygabiqhT7jBQ4AdYcWNHG1l7eTkrFj3Ph8FKPIE4kBPEGtjKF5bsFLqONSc4LtHl7YG39+xTea/n2rCmdxRFiIAqvvmoW/cqkSadGsm9g5AFqX8/jNjxpMOnpZ5tp684dRTTsx6SWFvxXROgJTqhdxoZJhgiKzUzD4PnboWIS4rNdfVteVxM8xfhNEy+zklnML+Id3B2R18OMvQhN7V8yPLo7pZbEVtjo03qxCfCV1tHhGffoiw5kH+itA3b6XDpT1S5w2j6PGmsI/SOPyfOoXHsxaLbxIIcZ2xT4e/PltWMsZ00GWERdEm/TKKvoP7p0nSVDqU0Y2bYBX15boZf8ku6DRO9j4XY3Thv9OvDbu1zS2F9IUZJpeTI4SOEY4roc7Jp2hTRD3RYIueXbyfmaCv1RPNYANvA7YOQrfKwBdC+nnftvqKIAu/FBkt+mCeheFHAKlHx+D4IiAPT4EsG6JpRuWwwFkN2na3Gf3Zxfxp9GIiXnBY3ZR+/3sBEGC3gEascB59eeHiY7rxJnEM8HbsBaHb93y20CwTkySoAXyPzxcDZ5+23qMya7BHWEXgatL014gycJKSvHhiSRONpf8MSw2iYko1l5n4oX6YjRieU3BM5Hgbja8M6b7x/DxcF+lSu+/Ci+YC8ZeLAqt1VxVhKyiBhkcCQZJNjs2LaMYK7pxH/1aeCpXdc/gNt8patFmZ6BX2aBxjv4vVSu2bSjNsrZsftJ323j75DnbQfFIZlxn2aUV2bE3TgdIXwrnPcX5hqkIQh1QdX4P5mLkG5hEKPRCkbhdXz3hQHpZNl6OZnKTZZzu0KH1eGOM8jg/yID348BG4Daqm4tjendv1eweTHRMilBre3r+Useejf7ghIlHCqNg/di3abbO8iJvUMWH/0dzzfdyQRX7mmkpQOFaJsEs2Ldr8SfwxOxLVQJIHiWfddT68UD8o+PlWmw/mMsNX/Z/fJkN9Ti4Mwp0oR1Kyf42HeADHLvg/q4Wwtn0+rVeMKdTxMUBNFCuqLxutKuJywYQ8LizXhpChE1IF6YPeRbCdolreEuQYvNwcT1hbAgc5W4F8qK2JxTg/0Y7a1ck6x7xKxoqeyC10lnxbXvdYqti7DNGJlHr5XDyb7T7/vN0KZXOjyF8TntnNcfrmLRvtA+NPJuyjvj0DdVu5CLvilSkfCCnbZmYflcVqrOEujvoaF3cp9QfTfTik0Rn9NckpK8ZNWjm+ohsK8Kpk/HKesvsMlGOeuW9J4agSiNVsVAw4sXwHXSnJEbKG9jLAdATa4BhNVxIk3lt9jHqwlK+/HzhTSOVXyu+aNAiDe/VI+7OO0vElF/ugr1qaaxkMdHuOqDy0VJk4DJv3MVYkfjBwvYfjranAHVwxsXj9gh+ARka3SS3YDwTNYfjgUSy1lxRCEaAns43jtrk5B1AOC8Sc/eTuiZxWPOYQJK+N2VCkshAmmwYHdeaTcnCQ7N6AZiQrLLlUR6coMAkSXwCwAQcBj32j8eiLxqH9EAt0wPxtjpg7psYqewxKbWZQpdgQkUc/hkncTEhxFIx8zQ0i7VV+zoMAF11hZq4y7Gp0f1Zc18MHPrb1nAdhnMlD4FOUJOfDly12V8GBxHFsLSotYjItLwEjoGgNc4LWNGDHM9lqwDNwS9nzBUA7OZCD/PXKcE/HK4mse+9kWc/ec/J2E1Gu4tAdzKo3Cp5E1WWDcV8YIHAG2XduEKusVsscRVG7vghcP25NCqg7PsG1NF7Ptvc1ebp9mK1mM1nCGZe/6hUC66G3wMrYevHgm/oduFPjLKb9T5V2t/8hFw6Q+j8rlAhvey/z4os16v0EZNrapaK2pj97dffZ04oIYRa538sjwr60YohsjVq3HMs8nhY4nxhvkGUREZ+u9DxmAMqun5BwUgw3hHFaaHTrYlwhUggjsQ45i9PAwjTFJqK4BM9XRZqScvuTJEqB4AQtVSehv1n6a/dGv8UaC+sK2UznQwJKl8NEPFCqbwkpZtAImI1+k9Hxpd7ajrZiPhigde17tqjkbU0EK/S67FGv9FPJYv6nGbouqeFW1B0gldGBkQf8PN9qzZW6fmUMZFaxY7ZaQ8osoPjXBJYYTHo1lAOCEGDN2R+mYQPa7vpcvEeKj5QKEQAh0+ZqKxhs6AwwKhhee2v6bllgRUq5lEdL+01P1nAn6kWN3g3w6bH7QGjW4zxNtqFgI4mCX/G3DbkqRalsjo3ZC3HfW+4BlHD8k6b7qoyk400zcxuPXX257tVo+wG+EKTfzJnL/Ypwuu2J6MnTPHDd5UOWLAa3fdLmc5UFIl5LF5D+F4K6d8ugC1B9K1rdQqhdkvM5a3XSBmGkD8jnIKjEwybSGdXAmqmfnUez6mEEk7lR3np0VYUL3RePxRs2ANGmTBwc6LJPS+Cbqf7tmLucKhoiECFNqTQDW/b+lmpzJ4daDpL3MnX3a3lUCv/xMOuhkoeYGFHL1MUDeD9OSSWBqr+QA1ucKqV93emXcgVFk5cdGYJFlb4xvgPNj69gXa2IzrdO7EIcuWwVkWjekC+BzpLAFW9fO1UNIsOlBVCoER0adlQ1zDMsk7MxnY0cn0keCTfV1928AXFdBIKXOWXCp4gOhgLUd9ec+66lIxK9GyoCulElXu/SI290FMEYy4wdE5j2AMIJhmo1R78i1q8JEmq/OliGOnY6EOw8Nl+4E5QNKkS0VQkWqKhxJCpedUpcurfLV6sSJi5hWFYGQ7wE3ASTodgo6oQPzRFEFYFUKy8GqOY4IfU+mYgudvcoo7pwOayU8lNoPSk3uIBGl58PJySvx9VFpRMq8OLFU4XxMLvxS6Rs1u3l4Za1L5wYduCWCHBq2HS3f9vOowPqgK/zAoub8wuBgAVPGOy73Djbh5KhtP8akPgknwBYdzgqwoJljKvqCUVw/WUEWe4lf5Bzfzgi5zD5kzb23cLQieBTTEGyFjIMOYG6jmtfyWE0r0Q6qw9Q6lAQ==" /><input
+              type="hidden"
+              id="com.salesforce.visualforce.ViewStateVersion"
+              name="com.salesforce.visualforce.ViewStateVersion"
+              value="202205070417210032" /><input
+              type="hidden"
+              id="com.salesforce.visualforce.ViewStateMAC"
+              name="com.salesforce.visualforce.ViewStateMAC"
+              value="AGV5SnViMjVqWlNJNkltaDNjbE5HTUc1VVEzVnFSSE5QTm5OaGNtczNTVVpWU2s5SlFuSndPRGhoVjFKMVRETk9ja3RSYVd0Y2RUQXdNMlFpTENKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUlzSW10cFpDSTZJbnRjSW5SY0lqcGNJakF3UkRZeE1EQXdNREF3V1c5YWQxd2lMRndpZGx3aU9sd2lNREpIZERBd01EQXdNREJVZHpCa1hDSXNYQ0poWENJNlhDSjJabk5wWjI1cGJtZHJaWGxjSWl4Y0luVmNJanBjSWpBd05YUXdNREF3TURBd1JqaE5WRndpZlNJc0ltTnlhWFFpT2xzaWFXRjBJbDBzSW1saGRDSTZNVFkxTWpFek56RTJNell3Tnl3aVpYaHdJam93ZlE9PS4uSWp0WndIOGNpWGNVczNlX1I1dGthTXB6RTdJcGtaV2xRblZCazBmeFhHcz0=" /></span
+        ></span>
+
+        <main role="main">
+          <div id="screen_1_collectionSchedule">
+            <div class="l-constrained l-padding-mobile-hd background-white">
+              <div
+                class="l-container l-padding-ad l-padding-bn background-white breadcrumbs"
+                id="breadcrumbs"
+              >
+                <a class="breadcrumbs__link" href="/apex/CollectionMapLookup"
+                  >Collection Schedule Lookup</a
+                >
+                <span class="breadcrumbs__divider">&gt;</span>
+                <span class="breadcrumbs__current"
+                  >Collection Schedule Detail</span
+                >
+                <h1 id="start">Schedule Detail</h1>
+              </div>
+
+              <div
+                class="row l-constrained background-white l-padding-mobile-hd"
+              >
+                <div class="nine columns">
+                  <p class="subheading">Address</p>
+                </div>
+                <div class="row schedule">
+                  <div class="four columns">
+                    <h3>Trash</h3>
+                    <p>Weekly</p>
+                    <p>Wednesday</p>
+                    <p>05/11/2022</p>
+                  </div>
+                  <div class="four columns">
+                    <h3>Recyclables</h3>
+                    <p><span id="j_id0:j_id65"> Biweekly</span></p>
+                    <p><span id="j_id0:j_id68"> Wednesday</span></p>
+                    <p><span id="j_id0:j_id72"> 05/18/2022</span></p>
+                  </div>
+                  <div class="four columns">
+                    <h3>Greens</h3>
+                    <p><span id="j_id0:j_id76"> Not eligible</span></p>
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="row" style="padding-top: 20px">
+                  <div class="nine columns">
+                    <span id="j_id0:j_id89"
+                      ><span id="j_id0:j_id90">
+                        <p>
+                          View your Recycling Collection Calendar
+                          <a
+                            href="https://www.sandiego.gov/sites/default/files/legacy/environmental-services/collection/pdf/curbsidecalendar-orange-recycleonly.pdf"
+                            target="_tab"
+                            >here</a
+                          >
+                        </p></span
+                      ></span
+                    >
+
+                    <p>
+                      <a
+                        href="https://www.sandiego.gov/environmental-services/collection-status"
+                        >Check your Trash/Recycling Collection Status</a
+                      >
+                      for delays or
+                      <a
+                        href="https://getitdone.force.com/TSWNewReport?type=Missed%20Trash"
+                        >report a Missed Collection</a
+                      >.
+                    </p>
+                  </div>
+                </div>
+                <div class="row" style="padding-top: 20px">
+                  <div class="nine columns">
+                    <div style="font-size: 0.8em">
+                      <p>
+                        <strong>Note:</strong> Please call us at 858-694-7000 to
+                        report any errors with this data.
+                      </p>
+                      <p>
+                        <strong>Tip:</strong> Bookmark this page for quick
+                        access in the future.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+            </div>
+          </div>
+        </main>
+        <span id="j_id0:j_id93">
+          <footer class="l-constrained text-center--mobile">
+            <div class="row">
+              <div class="three columns footer--left l-padding-ad l-padding-vm">
+                <div class="row l-padding-desktop-ld">
+                  <div class="twelve columns no-gutters">
+                    <img
+                      alt="The City of San Diego - logo"
+                      height="39"
+                      src="/resource/1641456002000/TSW_Web/img/logo--white--sm.png"
+                      width="49"
+                    />
+                    <ul class="socials">
+                      <li>
+                        <a
+                          href="https://www.facebook.com/CityofSanDiego"
+                          title="Facebook"
+                          ><i class="icon-facebook"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://twitter.com/CityofSanDiego"
+                          title="Twitter"
+                          ><i class="icon-twitter"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="http://www.youtube.com/user/TheCityofSanDiego"
+                          title="YouTube"
+                          ><i class="icon-youtube"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.instagram.com/cityofsandiego/"
+                          title="Instagram"
+                          ><i class="icon-instagram"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://nextdoor.com/city/feed/748155/?i=wkjkutqnzmjazcaegxre"
+                          title="Nextdoor"
+                          ><i class="icon-nextdoor"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/company/cityofsandiego"
+                          title="LinkedIn"
+                          ><i class="icon-linkedin"></i
+                        ></a>
+                      </li>
+                    </ul>
+                    <p class="copyright">
+                      Copyrighted &copy; 2002-2022 <br />
+                      City of San Diego. All rights reserved.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nine columns no-gutters"></div>
+            </div>
+            <div class="footer__privacy">
+              <div class="l-constrained row l-padding-vd text-center">
+                <ul>
+                  <li>
+                    <a href="https://www.sandiego.gov/disclaimers"
+                      >Disclaimers</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.sandiego.gov/privacy-policy"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.sandiego.gov/accessibility"
+                      >Accessibility</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.sandiego.gov/translation"
+                      >Language Translation</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.sandiego.gov/contact"
+                      >Contact the City</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <script>
+            window.jQuery ||
+              document.write(
+                '<script type="text/javascript" src="/resource/1641456002000/TSW_Web/js/vendor/jquery.min.js"/>'
+              );
+          </script>
+          <script
+            src="/resource/1641456002000/TSW_Web/js/plugins.min.js"
+            type="text/javascript"
+          ></script>
+
+          <script>
+            window.twttr = (function (d, s, id) {
+              var js,
+                fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+              if (d.getElementById(id)) return t;
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+
+              t._e = [];
+              t.ready = function (f) {
+                t._e.push(f);
+              };
+
+              return t;
+            })(document, "script", "twitter-wjs");
+          </script>
+
+          <script>
+            var code = document.getElementById("code");
+            if (code) {
+              var editor = CodeMirror.fromTextArea(code, {
+                lineNumbers: true,
+                mode: "application/x-ejs",
+                indentUnit: 1,
+                indentWithTabs: true,
+              });
+            }
+          </script>
+
+          <script>
+            var ctx = document.getElementById("lineChart");
+            if (ctx) {
+              ctx = ctx.getContext("2d");
+              var lineChart = new Chart(ctx).Line(data);
+            }
+          </script>
+
+          <script type="text/javascript">
+            // to top right away
+            if (window.location.hash) scroll(0, 0);
+            // void some browsers issue
+            setTimeout(function () {
+              scroll(0, 0);
+            }, 1);
+
+            // any position
+            $(function () {
+              // your current click function
+              $(".scroll").on("click", function (e) {
+                e.preventDefault();
+                $("html, body").animate(
+                  {
+                    scrollTop: $($(this).attr("href")).offset().top + "px",
+                  },
+                  1000,
+                  "swing"
+                );
+              });
+              // *only* if we have anchor on the url
+              if (window.location.hash) {
+                // smooth scroll to the anchor id
+                $("html, body").animate(
+                  {
+                    scrollTop: $(window.location.hash).offset().top + "px",
+                  },
+                  1000,
+                  "swing"
+                );
+              }
+            });
+          </script>
+
+          <script>
+            (function (i, s, o, g, r, a, m) {
+              i["GoogleAnalyticsObject"] = r;
+              (i[r] =
+                i[r] ||
+                function () {
+                  (i[r].q = i[r].q || []).push(arguments);
+                }),
+                (i[r].l = 1 * new Date());
+              (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+              a.async = 1;
+              a.src = g;
+              m.parentNode.insertBefore(a, m);
+            })(
+              window,
+              document,
+              "script",
+              "https://www.google-analytics.com/analytics.js",
+              "ga"
+            );
+
+            ga("create", "UA-41750560-19", "auto");
+            ga("send", "pageview");
+          </script></span
+        >
+      </div>
+    </div>
+    <span id="j_id0:j_id96">
+      <script
+        src="/resource/1641456002000/TSW_Web/js/plugins/modernizr-2.8.3.min.js"
+        type="text/javascript"
+      ></script>
+      <script
+        data-main="/resource/1641456002000/TSW_Web/js/main-built.js"
+        src="/resource/1641456002000/TSW_Web/js/lib/require.js"
+      ></script>
+
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          if ($(".search-icon").css("display") == "none") {
+            new google.translate.TranslateElement(
+              {
+                pageLanguage: "en",
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              },
+              "google_translate_element"
+            );
+            changeLanguageText();
+          } else {
+            new google.translate.TranslateElement(
+              {
+                pageLanguage: "en",
+                layout:
+                  google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+              },
+              "google_translate_element"
+            );
+          }
+        }
+        function changeLanguageText() {
+          var el = $(".goog-te-menu-value span:first-child");
+          if (el.text() == "Select Language") {
+            $(el).html("English");
+            $("#google_translate_element").fadeIn("slow");
+          } else {
+            setTimeout(changeLanguageText, 10);
+          }
+        }
+      </script>
+      <script
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        type="text/javascript"
+      ></script
+    ></span>
+    <script
+      async="async"
+      src="https://resources.digital-cloud-west.medallia.com/wdcwest/12990/onsite/embed.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      Sfdc.onReady(function () {
+        SfdcApp &&
+          SfdcApp.Visualforce &&
+          SfdcApp.Visualforce.VSManager &&
+          SfdcApp.Visualforce.VSManager.vfPrepareForms(["j_id0:j_id29"]);
+      });
+    </script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
 import ical, {ICalAlarmType, ICalCalendar} from 'ical-generator';
+import fetch from 'node-fetch';
 import {HTMLElement, parse} from 'node-html-parser';
 
 interface Pickup {

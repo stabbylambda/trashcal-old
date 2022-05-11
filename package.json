@@ -1,7 +1,7 @@
 {
   "name": "trashcal",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "A little utility to make a San Diego trash calendar",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "format": "xo"
+    "format": "xo",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,17 @@
   },
   "homepage": "https://github.com/stabbylambda/trashcal#readme",
   "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "@types/node-fetch": "^2.5.12",
+    "jest": "^28.1.0",
+    "msw": "^0.39.2",
+    "ts-jest": "^28.0.2",
     "typescript": "^4.6.4",
     "xo": "^0.48.0"
   },
   "dependencies": {
     "ical-generator": "^3.4.2",
+    "node-fetch": "^2.6.1",
     "node-html-parser": "^5.3.3"
   }
 }
