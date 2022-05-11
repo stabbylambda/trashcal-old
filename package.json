@@ -1,6 +1,6 @@
 {
   "name": "trashcal",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A little utility to make a San Diego trash calendar",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
