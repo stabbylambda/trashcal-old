@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/stabbylambda/trashcal#readme",
   "devDependencies": {
-    "@types/jest": "^27.5.0",
+    "@types/jest": "^28.1.6",
     "@types/node-fetch": "^2.5.12",
     "auto": "^10.36.5",
     "jest": "^28.1.0",
