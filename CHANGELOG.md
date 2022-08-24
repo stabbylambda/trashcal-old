@@ -1,3 +1,15 @@
+# v0.1.6 (Wed Aug 24 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Add some emoji ([@stabbylambda](https://github.com/stabbylambda))
+
+#### Authors: 1
+
+- David Stone ([@stabbylambda](https://github.com/stabbylambda))
+
+---
+
 # v0.1.5 (Tue Jul 26 2022)
 
 #### 🐛 Bug Fix
