@@ -7,13 +7,18 @@ interface Pickup {
   date: string;
 }
 
-function createCalendar(pickups: Pickup[], alarmTime?: number): ICalCalendar {
+function createCalendar(
+  pickups: Pickup[],
+  includeEmoji: boolean,
+  alarmTime?: number
+): ICalCalendar {
   const calendar = ical({ name: "Trash Calendar" });
 
   for (const pickup of pickups) {
+    const name = includeEmoji ? addEmoji(pickup.name) : pickup.name;
     const event = calendar.createEvent({
       start: pickup.date,
-      summary: pickup.name,
+      summary: name,
       allDay: true,
     });
 
@@ -33,6 +38,19 @@ async function getHtml(id: string): Promise<HTMLElement> {
   const page = await fetch(url);
   const text = await page.text();
   return parse(text);
+}
+
+function addEmoji(name: string): string {
+  switch (name) {
+    case "Trash":
+      return "🗑️ Trash";
+    case "Recyclables":
+      return "♻️ Recyclables";
+    case "Greens":
+      return "🌳 Greens";
+    default:
+      return name;
+  }
 }
 
 async function getDates(html: HTMLElement): Promise<Pickup[]> {
@@ -55,14 +73,16 @@ async function getDates(html: HTMLElement): Promise<Pickup[]> {
 export interface TrashcalOptions {
   id: string;
   alarmTime?: number;
+  includeEmoji?: boolean;
 }
 
 export async function trashcal({
   id,
   alarmTime,
+  includeEmoji = false,
 }: TrashcalOptions): Promise<ICalCalendar> {
   const html = await getHtml(id);
   const dates = await getDates(html);
-  const calendar = createCalendar(dates, alarmTime);
+  const calendar = createCalendar(dates, includeEmoji, alarmTime);
   return calendar;
 }
