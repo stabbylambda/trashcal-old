@@ -35,7 +35,7 @@
   "dependencies": {
     "ical-generator": "^3.5.1",
     "node-fetch": "^2.6.1",
-    "node-html-parser": "^5.4.1"
+    "node-html-parser": "^6.0.0"
   },
   "auto": {
     "plugins": [
